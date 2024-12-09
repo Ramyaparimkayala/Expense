@@ -1,0 +1,18 @@
+<form (ngSubmit)="addExpense()">
+  <table>
+  <tr>
+    <td><label for="description">Description: </label></td>
+    <!-- ngModel - binds imputs to newExpense -->
+    <td><input id="description" type="text" [(ngModel)]="newExpense.description" name="description" required /></td>
+  </tr>
+  <tr>
+    <td><label for="amount">Amount: </label></td>
+    <td><input id="amount" type="number" [(ngModel)]="newExpense.amount" name="amount" required /></td>
+  </tr>
+  <tr>
+    <td><label for="date">Date: </label></td>
+    <td><input id="date" type="date" [(ngModel)]="newExpense.date" name="date" required /></td>
+  </tr>
+  <tr><td colspan=2><button type="submit">{{selectedExpense ? 'Update' : 'Add'}} Expense</button></td></tr>
+</table>
+</form>
